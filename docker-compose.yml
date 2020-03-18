@@ -1,12 +1,12 @@
 version: '3'
 services:
   openface-flask:
-    image: mgelisgen/openface-flask:1.0
+    image: mgelisgen/openface-flask:3.0
     build: .
     ports:
-      - "80:80"
+      - "81:80"
     volumes:
-      - .:/home/openface-build/deploy
+      - .:/usr/local/deploy
       - /uploaded
       - /out
-      - /dev/null:/home/openface-build/deploy/output.log
+      - /dev/null:/usr/local/deploy/output.log

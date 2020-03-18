@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def execute_openface_script():
     # can also suppress outputs here, this could improve performance
-    call(['./../build/bin/FeatureExtraction', '-fdir', './../build/bin/uploaded', '-out_dir', './out'])
+    call(['./../bin/FeatureExtraction', '-fdir', './../bin/uploaded', '-out_dir', './out'])
 
 
 def read_output():
@@ -33,7 +33,7 @@ def read_and_save_file(file_key):
     imagefile = request.files[file_key]
     filename = werkzeug.utils.secure_filename(imagefile.filename)
     print('Received image File name : ' + imagefile.filename)
-    imagefile.save('../build/bin/uploaded/' + filename)  # save file to uploaded folder
+    imagefile.save('../bin/uploaded/' + filename)  # save file to uploaded folder
 
 
 if __name__ == '__main__':

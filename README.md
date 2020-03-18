@@ -4,8 +4,8 @@ Given images of faces via post request, this app returns the eye gaze (both posi
 
 To run for dev environment:
 
-docker-compose up --build 
+docker-compose up --build
 
 or 
 
-docker container run -it -p 80:80 mgelisgen/openface-flask:<tag>
+docker container run -it -p 80:80 mgelisgen/openface-flask:tag

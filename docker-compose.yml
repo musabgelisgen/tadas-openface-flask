@@ -4,7 +4,7 @@ services:
     image: mgelisgen/openface-flask:3.0
     build: .
     ports:
-      - "81:80"
+      - "80:80"
     volumes:
       - .:/usr/local/deploy
       - /uploaded

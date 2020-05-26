@@ -51,10 +51,10 @@ def read_output(gaze_offset, pose_offset):
             if 0.15 < gaze_angle_x or gaze_angle_x < -0.2:
                 eyes_on_the_road = False
 
-            if 0.3 < pose_Ry or pose_Ry < -0.3:
+            if 0.35 < pose_Ry or pose_Ry < -0.35:
                 head_on_the_road = False
 
-            if eyes_on_the_road:
+            if eyes_on_the_road and head_on_the_road:
                 driver_attention = True
 
         return jsonify(driver_attention=driver_attention, is_confident=is_confident, result=result, gaze_angle=gaze_angle_x, pose=pose_Ry)
